@@ -19,6 +19,7 @@ import CryptoJS from 'crypto-js';
 import password from 'vue3-password-strength-meter';
 
 
+
 export default {
   data() {
     return {
@@ -27,7 +28,7 @@ export default {
       passWord: '',
       toggle: true,
       badge: false,
-      pdfUrl: '' // Đường dẫn URL của tệp PDF
+      pdfUrl: '', // Đường dẫn URL của tệp PDF
     };
   },
   components: { password },
@@ -101,12 +102,17 @@ export default {
         }
 
 
+
+
+
+
+
         // Tạo blob từ ArrayBuffer
         const blob = new Blob([decryptedUint8Array], { type: 'application/pdf' });
 
         this.pdfUrl = URL.createObjectURL(blob)
 
-        
+
 
 
 
